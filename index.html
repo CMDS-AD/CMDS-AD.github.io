@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMDS-AD | Project Page</title>
+    <meta
+      name="description"
+      content="Project page for CMDS-AD: Cross-Modal Dual-Stream Decoupling for Few-Shot Anomaly Detection."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#top">CMDS-AD</a>
+        <nav class="nav">
+          <a href="#overview">Overview</a>
+          <a href="#method">Method</a>
+          <a href="#results">Results</a>
+          <a href="#analysis">Analysis</a>
+          <a href="#citation">Citation</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero section">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">ECCV 2026 Project Page</p>
+            <h1>
+              CMDS-AD: Cross-Modal Dual-Stream Decoupling for Few-Shot Anomaly
+              Detection
+            </h1>
+            <p class="hero-summary">
+              CMDS-AD tackles extreme few-shot multi-modal anomaly detection by
+              decoupling low-frequency structural priors from high-frequency
+              defect cues. A diffusion normal estimator anchors a stable
+              estimated stream, a real stream preserves fine anomalies, and a
+              coordinate-aware cross-modal mapper aligns RGB and 3D signals with
+              higher precision.
+            </p>
+
+            <div class="author-list">
+              <span class="author-pill">Junhao Cai<sup>1</sup></span>
+              <span class="author-pill">Deyu Zeng<sup>1,2</sup>*</span>
+              <span class="author-pill">Junhao Pang<sup>1</sup></span>
+              <span class="author-pill">Junyu Chen<sup>2</sup></span>
+              <span class="author-pill">Qiwei Liang<sup>1,3</sup></span>
+              <span class="author-pill">Xiaopin Zhong<sup>1</sup></span>
+              <span class="author-pill">Zongze Wu<sup>1</sup></span>
+            </div>
+
+            <p class="corresponding-note">* Corresponding author: Deyu Zeng</p>
+
+            <div class="affiliation-grid">
+              <article class="affiliation-card">
+                <div class="affiliation-index">1</div>
+                <div>
+                  <h3>Shenzhen University</h3>
+                  <p>Shenzhen, Guangdong 518060, China</p>
+                </div>
+              </article>
+              <article class="affiliation-card">
+                <div class="affiliation-index">2</div>
+                <div>
+                  <h3>Guangzhou Maritime University</h3>
+                  <p>Guangzhou, Guangdong 510725, China</p>
+                </div>
+              </article>
+              <article class="affiliation-card">
+                <div class="affiliation-index">3</div>
+                <div>
+                  <h3>Hong Kong University of Science and Technology (Guangzhou)</h3>
+                  <p>Guangzhou, Guangdong 511453, China</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="contact-grid">
+              <div class="contact-card">
+                <span class="contact-label">Inst. 1 Emails</span>
+                <p>
+                  <a href="mailto:caijunhao27@gmail.com">caijunhao27@gmail.com</a>,
+                  <a href="mailto:2500092013@mails.szu.edu.cn"
+                    >2500092013@mails.szu.edu.cn</a
+                  >,
+                  <a href="mailto:liangqiwei2022@email.szu.edu.cn"
+                    >liangqiwei2022@email.szu.edu.cn</a
+                  >,
+                  <a href="mailto:xzhong@szu.edu.cn">xzhong@szu.edu.cn</a>,
+                  <a href="mailto:zzwu@szu.edu.cn">zzwu@szu.edu.cn</a>
+                </p>
+              </div>
+              <div class="contact-card">
+                <span class="contact-label">Inst. 2 Emails</span>
+                <p>
+                  <a href="mailto:zengdeyu@gzmtu.edu.cn">zengdeyu@gzmtu.edu.cn</a>,
+                  <a href="mailto:chenjunyu@gzmtu.edu.cn"
+                    >chenjunyu@gzmtu.edu.cn</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a
+                class="button primary"
+                href="assets/paper/CMDS-AD_ECCV2026.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Paper PDF
+              </a>
+              <a
+                class="button secondary"
+                href="https://github.com/Junhaocai27/CMDS-AD"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Code Repository
+              </a>
+              <a class="button secondary" href="#citation">BibTeX</a>
+              <a class="button ghost" href="mailto:zengdeyu@gzmtu.edu.cn">
+                Contact
+              </a>
+            </div>
+
+            <ul class="keyword-list">
+              <li>Few-Shot Learning</li>
+              <li>Multi-Modal Anomaly Detection</li>
+              <li>Diffusion Models</li>
+              <li>Dual-Stream Optimization</li>
+            </ul>
+          </div>
+
+          <div class="hero-panel">
+            <figure class="card figure-card reveal">
+              <img
+                src="assets/figures/intro.png"
+                alt="Radar chart comparing CMDS-AD against prior methods on MVTec 3D-AD and EyeCandies."
+              />
+              <figcaption>
+                Few-shot benchmark overview. CMDS-AD consistently improves both
+                I-AUROC and AUPRO across 1-shot, 2-shot, and 4-shot settings on
+                MVTec 3D-AD and EyeCandies.
+              </figcaption>
+            </figure>
+
+            <aside class="scoreboard card reveal">
+              <div class="scoreboard-header">
+                <p class="eyebrow">Benchmark Highlights</p>
+                <h2>New state of the art from 1-shot to 4-shot</h2>
+              </div>
+
+              <div class="score-grid">
+                <article class="score-card">
+                  <span class="score-label">MVTec 3D-AD (1-shot)</span>
+                  <strong>79.6 / 94.2</strong>
+                  <span class="score-metric">I-AUROC / AUPRO@30%</span>
+                  <span class="score-delta">+5.7 / +2.0 vs prior best</span>
+                </article>
+                <article class="score-card">
+                  <span class="score-label">EyeCandies (1-shot)</span>
+                  <strong>77.2 / 85.5</strong>
+                  <span class="score-metric">I-AUROC / AUPRO@30%</span>
+                  <span class="score-delta">+7.7 / +5.6 vs prior best</span>
+                </article>
+                <article class="score-card">
+                  <span class="score-label">MVTec 3D-AD (4-shot)</span>
+                  <strong>87.1 / 95.8</strong>
+                  <span class="score-metric">I-AUROC / AUPRO@30%</span>
+                  <span class="score-delta">High precision localization</span>
+                </article>
+                <article class="score-card">
+                  <span class="score-label">EyeCandies (4-shot)</span>
+                  <strong>82.7 / 87.7</strong>
+                  <span class="score-metric">I-AUROC / AUPRO@30%</span>
+                  <span class="score-delta">Robust under severe scarcity</span>
+                </article>
+              </div>
+
+              <p class="score-note">
+                Evaluation follows the standard few-shot protocol with
+                <code>k in {1, 2, 4}</code> normal samples per category.
+              </p>
+            </aside>
+          </div>
+        </section>
+
+        <section id="overview" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Overview</p>
+            <h2>Separating stable structure from defect-sensitive detail</h2>
+          </div>
+
+          <div class="overview-grid">
+            <div class="card prose reveal">
+              <p>
+                Few-shot anomaly detection remains difficult because existing
+                multi-modal methods tend to process all spatial content
+                uniformly, mixing stable macroscopic structure with
+                high-frequency localized defect signals. Under severe data
+                scarcity, this creates cross-modal misalignment and inflated
+                false-positive responses.
+              </p>
+              <p>
+                CMDS-AD reframes the problem with a dual-stream design. A
+                LoRA-guided diffusion model augments scarce RGB data, while a
+                diffusion-based normal estimator provides a structurally stable
+                estimated stream that behaves like a non-linear low-pass filter.
+                This auxiliary stream anchors normality, allowing the real
+                stream to focus on micro-defects without losing cross-modal
+                consistency.
+              </p>
+              <p>
+                A Coordinate-Aware Hierarchical Feature Mapper aligns RGB and 3D
+                semantics across multiple scales, and a multiplicative anomaly
+                fusion rule keeps only the spatial regions that are supported by
+                both modalities, sharply reducing isolated modality-specific
+                noise.
+              </p>
+            </div>
+
+            <div class="stack">
+              <article class="card insight-card reveal">
+                <span class="insight-index">01</span>
+                <h3>Diffusion as more than augmentation</h3>
+                <p>
+                  The normal estimator is repurposed as a low-frequency prior,
+                  not just a generator, giving the method a stable structural
+                  template even in the 1-shot regime.
+                </p>
+              </article>
+              <article class="card insight-card reveal">
+                <span class="insight-index">02</span>
+                <h3>Dual-stream decoupling</h3>
+                <p>
+                  The estimated stream captures low-frequency normal structure,
+                  while the real stream preserves coupled high- and low-frequency
+                  content to localize subtle anomalies.
+                </p>
+              </article>
+              <article class="card insight-card reveal">
+                <span class="insight-index">03</span>
+                <h3>Cross-modal precision scoring</h3>
+                <p>
+                  Element-wise multiplication of 2D and 3D anomaly maps acts as
+                  a strict spatial gate, suppressing false alarms and improving
+                  boundary sharpness.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="method" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Method</p>
+            <h2>CMDS-AD pipeline</h2>
+          </div>
+
+          <figure class="card figure-card wide reveal">
+            <img
+              src="assets/figures/pipeline_new.png"
+              alt="Pipeline diagram of the CMDS-AD framework."
+            />
+            <figcaption>
+              The framework combines diffusion-driven multimodal augmentation,
+              real and estimated streams, coordinate-aware feature mapping, and
+              multiplicative cross-modal anomaly scoring.
+            </figcaption>
+          </figure>
+
+          <div class="steps-grid">
+            <article class="step-card card reveal">
+              <span class="step-index">Step 1</span>
+              <h3>Diffusion-driven augmentation</h3>
+              <p>
+                Stable Diffusion v2.1 is LoRA-finetuned to synthesize diverse
+                RGB samples from very limited normal data. Marigold then
+                predicts estimated surface normals for both real and generated
+                images.
+              </p>
+            </article>
+            <article class="step-card card reveal">
+              <span class="step-index">Step 2</span>
+              <h3>Real and estimated streams</h3>
+              <p>
+                The estimated stream acts as a purely low-frequency anchor,
+                while the real stream retains coupled detailed geometry. Their
+                complementary anomaly responses are kept independent until final
+                fusion.
+              </p>
+            </article>
+            <article class="step-card card reveal">
+              <span class="step-index">Step 3</span>
+              <h3>Coordinate-aware mapper</h3>
+              <p>
+                Multi-scale ViT features from layers 4, 7, and 11 are aligned
+                through coordinate attention and spatial selection, which
+                preserves positional precision while closing the 2D-3D semantic
+                gap.
+              </p>
+            </article>
+            <article class="step-card card reveal">
+              <span class="step-index">Step 4</span>
+              <h3>Multiplicative anomaly fusion</h3>
+              <p>
+                Weighted real and estimated anomaly maps are merged within each
+                modality, then multiplied across 2D and 3D to keep only jointly
+                supported defect regions.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="results" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Results</p>
+            <h2>Quantitative gains and cleaner localization</h2>
+          </div>
+
+          <div class="results-strip">
+            <article class="metric-highlight card reveal">
+              <span class="metric-context">MVTec 3D-AD, 1-shot</span>
+              <strong>79.6%</strong>
+              <span class="metric-name">I-AUROC</span>
+            </article>
+            <article class="metric-highlight card reveal">
+              <span class="metric-context">MVTec 3D-AD, 1-shot</span>
+              <strong>94.2%</strong>
+              <span class="metric-name">AUPRO@30%</span>
+            </article>
+            <article class="metric-highlight card reveal">
+              <span class="metric-context">EyeCandies, 1-shot</span>
+              <strong>77.2%</strong>
+              <span class="metric-name">I-AUROC</span>
+            </article>
+            <article class="metric-highlight card reveal">
+              <span class="metric-context">EyeCandies, 1-shot</span>
+              <strong>85.5%</strong>
+              <span class="metric-name">AUPRO@30%</span>
+            </article>
+          </div>
+
+          <div class="results-grid">
+            <article class="card prose reveal">
+              <h3>Benchmark summary</h3>
+              <p>
+                On MVTec 3D-AD, CMDS-AD reaches
+                <strong>79.6% I-AUROC</strong> and
+                <strong>94.2% AUPRO@30%</strong> in the 1-shot setting, then
+                scales to <strong>87.1%</strong> and <strong>95.8%</strong> at
+                4-shot. The method is especially strong on geometrically complex
+                categories such as <em>Bagel</em> and <em>Rope</em>.
+              </p>
+              <p>
+                On EyeCandies, CMDS-AD establishes a new state of the art across
+                all few-shot settings, delivering
+                <strong>77.2% I-AUROC</strong> and
+                <strong>85.5% AUPRO@30%</strong> in the 1-shot setting and
+                reaching <strong>82.7% I-AUROC</strong> at 4-shot.
+              </p>
+            </article>
+
+            <article class="card prose reveal">
+              <h3>Why the maps look better</h3>
+              <p>
+                The estimated stream provides a stable structural guide, which
+                helps the real stream avoid confusing background texture or
+                sensor noise with true defects. The final multiplicative fusion
+                then removes isolated modality-specific responses, resulting in
+                sharper boundaries and fewer false alarms in normal regions.
+              </p>
+              <p>
+                This behavior is visible both on texture-driven defects and on
+                subtle geometric anomalies that are easy to miss from RGB alone.
+              </p>
+            </article>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="card figure-card reveal">
+              <img
+                src="assets/figures/full_ours.png"
+                alt="Qualitative examples showing RGB, real normals, estimated normals, and anomaly maps."
+              />
+              <figcaption>
+                Modality complementarity. CMDS-AD captures color-only, shape-only,
+                and combined anomalies by leveraging both RGB and 3D cues.
+              </figcaption>
+            </figure>
+            <figure class="card figure-card reveal">
+              <img
+                src="assets/figures/compare_with_baseline_new.png"
+                alt="Comparison of anomaly overlays between CMDS-AD and prior baselines."
+              />
+              <figcaption>
+                Qualitative comparison with prior methods. CMDS-AD yields tighter
+                masks and fewer false positives on both MVTec 3D-AD and
+                EyeCandies.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="analysis" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Analysis</p>
+            <h2>Ablations confirm the design choices</h2>
+          </div>
+
+          <div class="analysis-grid">
+            <figure class="card figure-card reveal">
+              <img
+                src="assets/figures/sensitivity.png"
+                alt="Sensitivity analysis over fusion weights on MVTec 3D-AD and EyeCandies."
+              />
+              <figcaption>
+                Sensitivity analysis over estimated-stream fusion weights. A
+                moderate weight of <code>0.1</code> consistently provides the
+                best balance across datasets and shot settings.
+              </figcaption>
+            </figure>
+
+            <article class="card reveal">
+              <h3>Ablation takeaways</h3>
+              <div class="analysis-points">
+                <div class="analysis-point">
+                  <span class="analysis-title">Full model wins on localization</span>
+                  <p>
+                    Under the 4-shot setting, the full system reaches
+                    <strong>0.958 AUPRO@30%</strong> and
+                    <strong>0.410 AUPRO@1%</strong>, confirming that the real
+                    stream, estimated stream, and feature mapper work best
+                    together.
+                  </p>
+                </div>
+                <div class="analysis-point">
+                  <span class="analysis-title">Feature mapper matters</span>
+                  <p>
+                    Replacing the proposed mapper with a standard MLP degrades
+                    localization metrics, showing the importance of hierarchical
+                    gating and coordinate-aware alignment.
+                  </p>
+                </div>
+                <div class="analysis-point">
+                  <span class="analysis-title">Multiplication beats simpler fusion</span>
+                  <p>
+                    Element-wise multiplication achieves
+                    <strong>0.989 P-AUROC</strong> and
+                    <strong>0.958 AUPRO@30%</strong>, outperforming addition for
+                    fine-grained localization under strict false-positive
+                    constraints.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="citation" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Citation</p>
+            <h2>Paper and acknowledgements</h2>
+          </div>
+
+          <div class="citation-grid">
+            <article class="card reveal">
+              <h3>BibTeX</h3>
+              <pre><code id="bibtex-entry">@inproceedings{cai2026cmds,
+  title     = {CMDS-AD: Cross-Modal Dual-Stream Decoupling for Few-Shot Anomaly Detection},
+  author    = {Cai, Junhao and Zeng, Deyu and Pang, Junhao and Chen, Junyu and Liang, Qiwei and Zhong, Xiaopin and Wu, Zongze},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026}
+}</code></pre>
+              <button class="button secondary small" type="button" data-copy-target="bibtex-entry">
+                Copy BibTeX
+              </button>
+              <p class="copy-status" data-copy-status aria-live="polite"></p>
+            </article>
+
+            <article class="card prose reveal">
+              <h3>Acknowledgements</h3>
+              <p>
+                This research work was financially supported in part by the
+                Guangdong Major Project of Basic Research under Grant
+                2023B0303000009, the NSFC Youth Fund Project under Grant
+                62403326, the Shenzhen Fundamental Research Fund under Grant
+                JCYJ20230808105212023, the Research Team Cultivation Program of
+                Shenzhen University under Grant 2023JCT004, and the Shenzhen
+                University 2035 Program for Excellent Research under Grant
+                00000224.
+              </p>
+              <p>
+                Project materials on this page are adapted from the manuscript
+                figures and content provided in the ECCV 2026 paper directory.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          CMDS-AD project page built for GitHub Pages. For the full manuscript,
+          see
+          <a href="assets/paper/CMDS-AD_ECCV2026.pdf" target="_blank" rel="noreferrer"
+            >the paper PDF</a
+          >.
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
