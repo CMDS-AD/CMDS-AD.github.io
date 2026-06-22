@@ -203,6 +203,42 @@ h3 {
   font-size: 0.96rem;
 }
 
+.author-pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.author-pill-link:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(36, 93, 165, 0.24);
+  box-shadow: 0 14px 28px rgba(36, 93, 165, 0.14);
+}
+
+.author-name {
+  color: var(--text);
+}
+
+.author-link-note {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(36, 93, 165, 0.1);
+  color: var(--blue);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 sup {
   font-size: 0.7em;
 }
