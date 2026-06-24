@@ -355,6 +355,33 @@ sup {
   cursor: pointer;
 }
 
+.resource-button {
+  gap: 10px;
+  padding-left: 18px;
+  padding-right: 22px;
+}
+
+.button-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.button-icon .icon-fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.button-label {
+  display: inline-block;
+  letter-spacing: 0.01em;
+}
+
 .button:hover {
   transform: translateY(-1px);
 }
